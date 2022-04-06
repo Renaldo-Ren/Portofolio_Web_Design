@@ -1,0 +1,89 @@
+<html>
+    <head><title>Fill User Data</title>
+    <script type="text/javascript">
+      function resetAll(){
+        if(confirm("Reset All Data")){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+    </script>
+    </head>
+    <body bgcolor="pink" align="center" style="margin-top: 20% ">
+    <div class="form">
+    <form action="data.php"
+          method="GET"
+          onReset="return resetAll();">
+      Full Name:
+      <input type="text"
+             name="name"
+             placeholder="Full name"
+             value="" />
+      <br />
+	  <br />
+      Place of birth:
+      <input type="text"
+             placeholder="Place of birth"
+             name="pob" />
+      <br />
+	  <br />
+      Date of Birth:
+      <input type="text"
+             placeholder="Date of birth"
+             name="dob" />
+      <br />
+	  <br />
+      Address:
+      <textarea name="address" id="address"
+                align="left" rows="5" cols="50">
+      </textarea>
+      <br />
+	  <br />
+      Gender:
+      <input type="radio" name="choice" id="choice1" value="male"/>Male
+      <input type="radio" name="choice" id="choice2" value="female"/>Female
+      <input type="radio" name="choice" id="choice3" value="other"/>Others
+      <br />
+      <br />
+      Email:
+      <input type="text"
+             placeholder="Email"
+             name="email" />
+      <br />
+	  <br />
+      Phone:
+      <input type="text"
+             placeholder="Phone"
+             name="phone" />
+      <br />
+      <br />
+      <input type="submit"/>
+      <input type="reset"
+             value="Reset Form"/>
+    </form>
+    </div>
+  </body>
+</html>
+<style>
+    body {
+      background-image: url('Space2.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+    .form{
+        text-align: left;
+        color: white;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 400px;
+        background : #1c1b1b;
+        border: 1px soild silver;
+    }
+    .form p{
+        text-align: left;
+    }
+</style>

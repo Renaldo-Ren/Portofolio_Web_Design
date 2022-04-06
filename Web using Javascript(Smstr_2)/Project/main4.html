@@ -1,0 +1,129 @@
+<html>
+    <head><title>Zodiac Horoscope</title>
+        <script type="text/javascript">
+          function preLoadImage(){
+            horo = new Array(); // global variable
+            horo[0]=new Image();
+            horo[0].src="aries1.jpg";
+            horo[1]=new Image(); 
+            horo[1].src="aries.jpg";
+            horo[2]=new Image();
+            horo[2].src="taurus1.jpg";
+            horo[3]=new Image(); 
+            horo[3].src="taurus.jpg";
+            horo[4]=new Image();
+            horo[4].src="gemini1.jpg";
+            horo[5]=new Image(); 
+            horo[5].src="gemini.jpg";
+            horo[6]=new Image();
+            horo[6].src="cancer1.jpg";
+            horo[7]=new Image(); 
+            horo[7].src="cancer.jpg";
+            horo[8]=new Image();
+            horo[8].src="leo1.jpg";
+            horo[9]=new Image(); 
+            horo[9].src="leo.jpg";
+            horo[10]=new Image();
+            horo[10].src="virgo1.jpg";
+            horo[11]=new Image(); 
+            horo[11].src="virgo.jpg";
+            horo[12]=new Image();
+            horo[12].src="libra1.jpg";
+            horo[13]=new Image(); 
+            horo[13].src="libra.jpg";
+            horo[14]=new Image();
+            horo[14].src="scorpio1.jpg";
+            horo[15]=new Image(); 
+            horo[15].src="scorpio.jfif";
+            horo[16]=new Image();
+            horo[16].src="sagitarius1.jpg";
+            horo[17]=new Image(); 
+            horo[17].src="sagitarius.jpg";
+            horo[18]=new Image();
+            horo[18].src="capicorn1.jpg";
+            horo[19]=new Image(); 
+            horo[19].src="capicorn.jpg";
+            horo[20]=new Image();
+            horo[20].src="Aquarius1.jpg";
+            horo[21]=new Image();
+            horo[21].src="Aquarius.jpg";
+            horo[22]=new Image();
+            horo[22].src="pisces1.jpg";
+            horo[23]=new Image(); 
+            horo[23].src="pisces.jpg";
+          }
+        </script>
+    </head>
+    <body bgcolor="pink" align="center" style="margin-top: 20% " onLoad="preLoadImage();">
+    <h1>Zodiac Sign All Horoscope Constellation Stars</h1>
+    <div class="form">
+        <div>
+            <a href="#" onMouseOver="document.horo1.src=horo[1].src;" onMouseOut="document.horo1.src=horo[0].src;">
+            <img name="horo1" src="aries1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo2.src=horo[3].src;" onMouseOut="document.horo2.src=horo[2].src;">
+            <img name="horo2" src="taurus1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo3.src=horo[5].src;" onMouseOut="document.horo3.src=horo[4].src;">
+            <img name="horo3" src="gemini1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo4.src=horo[7].src;" onMouseOut="document.horo4.src=horo[6].src;">
+            <img name="horo4" src="cancer1.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="#" onMouseOver="document.horo5.src=horo[9].src;" onMouseOut="document.horo5.src=horo[8].src;">
+            <img name="horo5" src="leo1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo6.src=horo[11].src;" onMouseOut="document.horo6.src=horo[10].src;">
+            <img name="horo6" src="virgo1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo7.src=horo[13].src;" onMouseOut="document.horo7.src=horo[12].src;">
+            <img name="horo7" src="libra1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo8.src=horo[15].src;" onMouseOut="document.horo8.src=horo[14].src;">
+            <img name="horo8" src="scorpio1.jpg"/>
+            </a>
+        </div>
+        <div>
+            <a href="#" onMouseOver="document.horo9.src=horo[17].src;" onMouseOut="document.horo9.src=horo[16].src;">
+            <img name="horo9" src="sagitarius1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo10.src=horo[19].src;" onMouseOut="document.horo10.src=horo[18].src;">
+            <img name="horo10" src="capicorn1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo11.src=horo[21].src;" onMouseOut="document.horo11.src=horo[20].src;">
+            <img name="horo11" src="aquarius1.jpg"/>
+            </a>
+            <a href="#" onMouseOver="document.horo12.src=horo[23].src;" onMouseOut="document.horo12.src=horo[22].src;">
+            <img name="horo12" src="pisces1.jpg"/>
+            </a>
+        </div>
+    </div>
+  </body>
+</html>
+<style>
+    body {
+      background-image: url('Space3.jfif');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+    h1{
+        color: white;
+    }
+    .form{
+        text-align: left;
+        color: white;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 1500px;
+        border: 1px soild silver;
+    }
+    .form img{
+        height: 400px;
+        width: 350px;
+        margin: 10px;
+    }
+</style>

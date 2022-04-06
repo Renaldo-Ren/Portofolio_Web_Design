@@ -1,0 +1,131 @@
+<html>
+    <head><title>Calculation</title>
+        <script type="text/javascript">
+            function kepler1(){
+                alert("This about to find area of ellipse, so you will be asked to input r1 and r2 to find the area og the ellipse!");
+                var phi = (Math.PI).toFixed(2);
+                var a = parseFloat(prompt("r1 ?",""));
+                var b = parseFloat(prompt("r2 ?",""));
+                var area = phi * a * b;
+                document.write("<br> r1 = " + a);
+                document.write("<br> r2 = " + b);
+                document.write("<br> Area = " + area.toFixed(2));
+            }
+            function kepler2(){
+                alert("This about to find the mean motion of the planet around the sun, so you will be asked to input P (planet period)");
+                var tp = 2 * (Math.PI).toFixed(2);
+                var P = parseFloat(prompt("P ?",""));
+                while(P==0){
+                    alert("P can't be 0");
+                    var P = parseFloat(prompt("P ?",""));
+                }
+                var n = tp/P;
+                document.write("<br> P = " + P);
+                document.write("<br> n = " + n.toFixed(2));
+            }
+            function kepler3(){
+                alert("This about to find R2(Radius of second planet to sun), so you will be asked to input T1(Period of first planet), T2(Period of second planet), and R1(Radius of first planet to sun)")
+                var t1 = parseFloat(prompt("T1 ?",""));
+                var T1=Math.pow(t1,2);
+                var t2 = parseFloat(prompt("T2 ?",""));
+                var T2=Math.pow(t2,2);
+                var r1 = parseFloat(prompt("R1 ?",""));
+                var R1 = Math.pow(r1,3);
+                var r2 = (T2*R1)/T1;
+                var R2 = Math.cbrt(r2);
+                document.write("<br> T1 = " + T1);
+                document.write("<br> T2 = " + T2);
+                document.write("<br> R1 = " + R1);
+                document.write("<br> R2 = " + R2.toFixed(2));
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Kepler Laws</h1>
+        <pre>
+        <h2>First law of Kepler</h2>
+        <big>"The orbit of every planet is an ellipse with the Sun at one of the two foci."</big>
+        
+<img src="circle1.jpeg">                <img src="circle2.jpeg">
+Mathematically, an ellipse can be represented by the formula:
+<img src="for1.svg">
+
+where 'p' is the semi-latus rectum, ε is the eccentricity of the ellipse, r is the distance from the Sun to the planet, and θ is the angle to the planet's current position from its 
+closest approach, as seen from the Sun. So (r, θ) are polar coordinates.
+
+For an ellipse '0 < ε < 1' in the limiting case ε = 0, the orbit is a circle with the Sun at the centre (i.e. where there is zero eccentricity).
+
+At θ = 0°, perihelion, the distance is minimum
+<img src="for2.svg">
+
+At θ = 90° and at θ = 270° the distance is equal to 'p'.
+
+At θ = 180°, aphelion, the distance is maximum (by definition, aphelion is – invariably – perihelion plus 180°)
+<img src="for3.svg">
+
+The eccentricity ε is the coefficient of variation between rmin and rmax:
+<img src="for4.svg">
+
+The area of the ellipse is
+<img src="for5.svg">
+
+The special case of a circle is ε = 0, resulting in r = p = rmin = rmax = a = b and A = πr2.
+        </pre>
+        <pre>
+        <h2>Second law of Kepler</h2>
+        <big>"A line joining a planet and the Sun sweeps out equal areas during equal intervals of time."</big>
+<img src="circle3.jpeg">
+The same (blue) area is swept out in a fixed time period. The green arrow is velocity. The purple arrow directed towards the Sun is the acceleration. 
+The other two purple arrows are acceleration components parallel and perpendicular to the velocity.
+The orbital radius and angular velocity of the planet in the elliptical orbit will vary. This is shown in the animation: the planet travels faster when closer to the Sun, then 
+slower when farther from the Sun. Kepler's second law states that the blue sector has constant area.
+
+The area enclosed by the elliptical orbit is <img src="var1.svg">, So the period <img src="var2.svg"> satisfies
+<img src="for6.svg"> 
+
+and the mean motion of the planet around the Sun
+<img src="for7.svg">
+
+satisfies
+<img src="for8.svg">
+        </pre>
+        <pre>
+        <h2>Third law of Kepler</h2>
+        <big>"The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit."</big>
+<img src="for12.png">
+
+This captures the relationship between the distance of planets from the Sun, and their orbital periods.
+
+Kepler enunciated in 1619 this third law in a laborious attempt to determine what he viewed as the "music of the spheres" according to precise laws, and express it in terms of musical notation. 
+So it was known as the harmonic law.
+
+Using Newton's Law of gravitation (published 1687), this relation can be found in the case of a circular orbit by setting the centripetal force equal to the gravitational force:
+<img src="for9.svg">
+
+Then, expressing the angular velocity in terms of the orbital period and then rearranging, we find Kepler's Third Law:
+<img src="for10.svg">
+
+A more detailed derivation can be done with general elliptical orbits, instead of circles, as well as orbiting the center of mass, instead of just the large mass. 
+This results in replacing a circular radius, 'r', with the semi-major axis, 'a', of the elliptical relative motion of one mass relative to the other, as well as replacing the large mass 'M' with 'M+m'. 
+However, with planet masses being so much smaller than the Sun, this correction is often ignored. The full corresponding formula is:
+<img src="for11.svg">
+
+where 'M' is the mass of the Sun, 'm' is the mass of the planet, and 'G' is the gravitational constant, 'T' is the orbital period and 'a' is the elliptical semi-major axis.
+        </pre>
+        <form>
+            <input type = "button" value = "Kepler 1 Laws" onClick = "kepler1();">
+            <input type = "button" value = "Kepler 2 Laws" onClick = "kepler2();">
+            <input type = "button" value = "Kepler 3 Laws" onClick = "kepler3();">
+        </form>
+    </body>
+</html>
+<style>
+    body {
+      background-image: url('Earth(gaia).jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+      color: black;
+      font-size: 15px;
+    }
+</style>

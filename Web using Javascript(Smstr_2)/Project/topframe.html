@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+              background-image: url('Space.jpeg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;  
+              background-size: cover;
+            }
+            h2{
+                color: white;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: grey;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #111;
+            }
+        </style>
+        <script type="text/javascript">
+          function loadPage(URL){
+            parent.frames[1].location.href = URL;
+          }
+        </script>
+    </head>
+    <body bgcolor="lightyellow">
+        <ul>
+            <li><a href="#" onClick="loadPage('main1.html');">First</a></li>
+            <li><a href="#" onClick="loadPage('SecondPage.html');">Second</a></li>
+            <li><a href="#" onClick="loadPage('ThirdPage.html');">Third</a></li>
+            <li><a href="#" onClick="loadPage('main4.html');">Fourth</a></li>
+            <li><a href="#" onClick="loadPage('FifthPage.html');">Fifth</a></li>
+        </ul>
+    </body>
+</html>

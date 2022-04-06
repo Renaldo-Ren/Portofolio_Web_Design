@@ -1,0 +1,112 @@
+<html>
+    <head><title>Change Planet Picture</title>
+        <script type="text/javascript">
+          function preLoadImages(){
+            if(document.images){
+              planet = new Array();
+              planet[0]=new Image();
+              planet[0]="Merkurius.jpg";
+              planet[1]=new Image();
+              planet[1]="Venus.jpg";
+              planet[2]=new Image();
+              planet[2]="Earth.jpg";
+              planet[3]=new Image();
+              planet[3]="Mars.jpg";
+              planet[4]=new Image();
+              planet[4]="Jupiter.jpg";
+              planet[5]=new Image();
+              planet[5]="Saturn.jpg";
+              planet[6]=new Image();
+              planet[6]="Uranus.jpg";
+              planet[7]=new Image();
+              planet[7]="Neptune.jpg";
+            }
+            else{
+              alert("no picture");
+            }
+          }
+          function changePlanet(f){
+            for (var i = 0; i < f.planet.length;i++){
+              if(f.planet[i].checked){
+                document.images["planet"].src= planet[i];
+              }
+            }
+          }
+          function resetAll(){
+              if(confirm("Reset ALL")){
+                  document.images["planet"].src= planet[0];
+                  return true;
+                }
+                else{
+                  return false;
+                }
+          }
+        </script>
+    </head>
+    <body bgcolor="black" onload = "preLoadImages()" onReset="return resetAll();">
+        <div class="planet">
+        <img name="planet" id="planet" src="Merkurius.jpg"
+                 width="400" height="400" >
+            <br />
+        </div>
+        <div class="form">
+        <form name="formradio">
+          Choose The Planet:<p>
+          <input type=radio
+                 name="planet"
+                />Merkurius<br />
+          <input type=radio
+                 name="planet"
+                />Venus<br />
+          <input type=radio
+                 name="planet"
+                 />Earth<br />
+          <input type=radio
+                 name="planet"
+                 />Mars<br />
+          <input type=radio
+                 name="planet"
+                 />Jupiter<br />
+          <input type=radio
+                 name="planet"
+                 />Saturnus<br />
+          <input type=radio
+                 name="planet"
+                 />Uranus<br />
+          <input type=radio
+                 name="planet"
+                 />Neptunus<br />
+            </p>
+          <p>
+          <input type="button"
+                 value="Change Planet" onClick="changePlanet(this.form);" />
+          <input type="reset" />
+        </form>
+        </div>
+    </body>
+</html>
+<style>
+    body {
+      background-image: url('Space2.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+    .planet{
+        text-align: center;
+        position: relative;
+    }
+    .form{
+        text-align: center;
+        color: white;
+        margin: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 400px;
+        background : #1c1b1b;
+        border: 1px soild silver;
+    }
+    .form p{
+        text-align: left;
+    }
+</style>
